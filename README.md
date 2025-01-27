@@ -11,11 +11,11 @@ This Library Management system (LMS) implements a simple console based applicati
 - Display loans
 ## Project Structure
 The project consists of the following main classes:
-•	Main: handles user interactions.
-•	Library: Manages the core library operations.
-•	Book: Represents a book in the library.
-•	Patron: Represents a library patron.
-•	Loan: Manages the book loans.
+1. Main: handles user interactions.
+2. Library: Manages the core library operations.
+3. Book: Represents a book in the library.
+4. Patron: Represents a library patron.
+5. Loan: Manages the book loans.
 
 ## How to run this project
 1. Install Java and NetBeans
