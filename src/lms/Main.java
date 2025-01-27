@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author acer
+ * @author Susmita
  */
 public class Main {
 
@@ -129,7 +129,7 @@ public class Main {
 
                 case 8:
                     exit = true;
-                    System.out.println("Exiting the system. Goodbye!");
+                    System.out.println("Goodbye!");
                     break;
 
                 default:
