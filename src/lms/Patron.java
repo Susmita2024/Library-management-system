@@ -8,7 +8,10 @@ import java.util.List;
 
 /**
  *
- * @author Susmita
+ * @author Ansuman Student id : 64115  Lecturer name: Saroj Hiranwal Date written: 25/01/2025
+ * This class represents a users who has borrowed books from library and has core methods of registering patron, viewing book borrowed by
+ * patron,and ensuring loan is not exceeding the MAX_LOANS. It also has validation for email and phone no.
+ * 
  */
 public class Patron {
     private int patronID;
@@ -87,7 +90,7 @@ public class Patron {
     public boolean canBorrow() {
         return activeLoans.size() < MAX_LOANS;
     }
-    
+    //ToString method
     @Override
     public String toString() {
         return "Patron ID: " + patronID + ", Name: " + name;

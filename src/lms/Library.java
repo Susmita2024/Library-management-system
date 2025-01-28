@@ -10,7 +10,8 @@ import java.util.List;
 
 /**
  *
- * @author acer
+ * @author Zia Student id : 63686  Lecturer name: Saroj Hiranwal Date written: 26/01/2025
+ * Library class manages the book, patron and loans and provides functionality to add, remove books, register patron,issue loans.
  */
 public class Library {
  private List<Book> books = new ArrayList<>();
@@ -41,24 +42,24 @@ public class Library {
         this.loans = loans;
     }
  
-    //add book to the library
+    //method to add book to the library
     public void addBook(Book book){
       books.add(book);
         System.out.println("Books added successfully");
 }
     
-    //remove book from the library
+    //remove a  book from the library by its ID
     public void removeBook(int bookID){
        books.removeIf(book -> book.getBookID() == bookID); 
     }
     
-    
+    // register a new Patron
     public void registerPatron(Patron patron){
         patrons.add(patron);
         System.out.println("Patron added");
     }
     
-    //issue loan
+    //issue loan for a book to patron
     public Loan issueLoan(int bookId, int patronId) {
         Book book = findBookById(bookId);
         Patron patron = findPatronById(patronId);
@@ -134,7 +135,7 @@ public class Library {
         // Print success message
         System.out.println("Book with ID " + loanToReturn.getBookID() + " has been successfully returned.");
     }
-
+      // finds book in library by its unique id.
     private Book findBookById(int bookId) {
         for (Book book : books) {
             if (book.getBookID() == bookId) {
@@ -152,11 +153,10 @@ public class Library {
         }
         return null;
     }
-    
+    // generates a unique loan ID 
     private int generateLoanId() {
-    return loans.size() + 1; // Incremental based on the current number of loans
-}
+    return loans.size() + 1;  // generates next available ID.
 
 }
-
+}
 

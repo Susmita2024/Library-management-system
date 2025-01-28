@@ -8,7 +8,8 @@ import java.time.Period;
 
 /**
  *
- * @author acer
+ * @author Lahiru Student id : 64187  Lecturer name: Saroj Hiranwal Date written: 27/01/2025
+ * Loan class represents the loan which associates book and patron. It has method to calculate fine for overdue books.
  */
 public class Loan {
     private int loanID;
@@ -18,13 +19,14 @@ public class Loan {
     private LocalDate dueDate;
     private LocalDate returnDate;
     
+   //constructor
     public Loan(int loanID, int bookID, int patronID, LocalDate issueDate, LocalDate dueDate, LocalDate returnDate) {
         this.loanID = loanID;
         this.bookID = bookID;
         this.patronID = patronID;
         this.issueDate = issueDate;
         this.dueDate = dueDate;
-        this.returnDate = returnDate;
+        this.returnDate = returnDate;  
     }
 
     public int getLoanID() {
@@ -74,7 +76,7 @@ public class Loan {
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
-    
+    //methods
    public void calculateFine(){
        double fine;
        double dailyFineRate = 2.0;
@@ -93,6 +95,8 @@ public class Loan {
            System.out.println("Book has returned on time");
        }
    }
+   
+   
    
     @Override
     public String toString() {

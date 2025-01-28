@@ -6,14 +6,19 @@ package lms;
 
 /**
  *
- * @author acer
+ * @author Susmita Giri Student id : 63232  Lecturer name: Saroj Hiranwal Date written: 23/01/2025
+ * Class Description:
+ * The Book class represents a book in LMS system and includes details like bookId, title, author, publisher, availability status.
+ * It has methods for displaying the details of book and availability status.
  */
+// attributes for Book class which has unique identifier for book, title, author, publisher, availability status
 public class Book {
     private int bookID; 
     private String title;
     private String author;
     private String publisher;
     private boolean isAvailable;
+    
 //constructor
     public Book(int bookID, String title, String author,String publisher, boolean IsAvailable) {
         this.bookID = bookID;
@@ -65,7 +70,8 @@ public class Book {
     public void setIsAvailable(boolean IsAvailable) {
         this.isAvailable = IsAvailable;
     }
-   //displaying Book details 
+    
+   // method for displaying Book details 
     public void getDetails(){
         System.out.println("Book Details:");
         System.out.println("Title:"+ title);
@@ -78,7 +84,8 @@ public class Book {
         System.out.println("Availability updated:" + this.isAvailable );
     }
     
-    @Override
+    @Override 
+    // toString method 
     public String toString() {
         return "Book ID: " + bookID + ", Title: " + title + ", Author: " + author;
     }

@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Susmita
+ * @author Angad Student id : 64123  Lecturer name: Saroj Hiranwal Date written: 28/01/2025
+ * This class provides a user interface for interacting with Library management system.
  */
 public class Main {
 
@@ -37,7 +38,7 @@ public class Main {
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
-                case 1:
+                case 1:   // Adding book
                     System.out.print("Enter Book ID: ");
                     int bookID = scanner.nextInt();
                     scanner.nextLine();
@@ -51,7 +52,7 @@ public class Main {
                     System.out.println("Book added successfully.");
                     break;
 
-                case 2:
+                case 2: // Adding patron
                     System.out.print("Enter Patron ID: ");
                     int patronID = scanner.nextInt();
                     scanner.nextLine();
@@ -88,15 +89,18 @@ public class Main {
                     // Proceed if the IDs are valid (greater than 0)
                     if (loanPatronID > 0 && loanBookID > 0) {
                         // Assuming library.issueLoan(bookID, patronID) is a method to issue a loan
-                        library.issueLoan(loanBookID, loanPatronID);
+                         
+                    Loan loan = library.issueLoan(loanBookID, loanPatronID);
+                    if (loan != null){
                         System.out.println("Loan issued successfully.");
+                    }
                     } else {
-                        System.out.println("Error: IDs must be positive integers.");
+                        System.out.println("ID must be positive integers.");
                     }
                     
                     break;
 
-                case 4:
+                case 4:   //issue loan
                     System.out.print("Enter Loan ID: ");
                     int returnLoanID = scanner.nextInt();
                     System.out.print("Enter Return Date (YYYY-MM-DD): ");
@@ -105,15 +109,15 @@ public class Main {
                     library.returnBook(returnLoanID, returnDate);
                     break;
 
-                case 5:
-                    System.out.println("\nBooks in the Library:");
+                case 5:  // display available books
+                    System.out.println("\nBooks available in the Library:");
                     System.out.println("Books:");
                     for (Book book : library.getBooks()) {
                         System.out.println(book);
                     }
                     break;
 
-                case 6:
+                case 6: // display patrons
                     System.out.println("\nRegistered Patrons:");
                     for (Patron patron : library.getPatrons()) {
                         System.out.println(patron);
@@ -127,7 +131,7 @@ public class Main {
                     }
                     break;
 
-                case 8:
+                case 8:   //exit
                     exit = true;
                     System.out.println("Goodbye!");
                     break;
@@ -138,6 +142,7 @@ public class Main {
         }
 
         scanner.close();
+        System.out.println("Exiting Library Management System.");
     }
 
 }
