@@ -12,9 +12,9 @@ This Library Management system (LMS) implements a Java based console application
 ## Project Structure
 The project consists of the following main classes:
 1. Main: handles user interactions.
-2. Library: Manages the core library operations.
-3. Book: Represents a book in the library.
-4. Patron: Represents a library patron.
+2. Library: Manages the core library operations that is book,patron and loan. 
+3. Book: Represents a book details and availability in the library.
+4. Patron: Represents a personal details and borrowing limit of patron.
 5. Loan: Manages the book loans.
 
 ## How to run this project
@@ -36,4 +36,8 @@ The project consists of the following main classes:
 7. Display loans
 8. Exit
 
+## Project Requirement
+JDK : version 8 or higher.
 
+## Purpose
+Academic project for implementing OOP principles.
