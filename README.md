@@ -1,6 +1,6 @@
 ### Library Management System
 ## Description
-This Library Management system (LMS) implements a simple console based application which allows librarians to manage book, loans and patrons.
+This Library Management system (LMS) implements a Java based console application which allows librarians to manage book, loans and patrons.
 ## Features
 - Add and remove books
 - Add and remove patrons
@@ -18,7 +18,7 @@ The project consists of the following main classes:
 5. Loan: Manages the book loans.
 
 ## How to run this project
-1. Install Java and NetBeans
+1. Install Java and NetBeans IDE.
 2. Clone this Repository.
 3. Navigate to the project directory.
    ```
