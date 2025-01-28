@@ -36,8 +36,5 @@ The project consists of the following main classes:
 7. Display loans
 8. Exit
 
-## Project Requirement
-JDK : version 8 or higher.
-
 ## Purpose
 Academic project for implementing OOP principles.
