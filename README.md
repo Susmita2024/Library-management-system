@@ -20,8 +20,9 @@ The project consists of the following main classes:
 ## How to run this project
 1. Install Java and NetBeans
 2. Clone this Repository.
-3. Navigate to the project directory
-4. Run the Main Class.
+3. Navigate to the project directory.
+   ``` cd <path to LMS> ````
+5. Run the Main Class.
 
 ## Usage -During running application following options will be shown
 1. Add a book
